@@ -5,11 +5,11 @@ const axios = require("axios");
 const {URL_BASE} = process.env;
 const server = require('./src/app.js');
 const  getAllTemperaments = require('./src/Controllers/getAllTemperaments.js') 
-
+const port = process.env.PORT || 3001;
 // Syncing all the models at once.
 conn.sync({ alter: true }).then(() => {
-  server.listen(3001, async () => {
-    console.log('listening at 3001'); // eslint-disable-line no-console
+  server.listen(port, async () => {
+    console.log(`listening at ${port}`); // eslint-disable-line no-console
   
     const temperamets = await getAllTemperaments()
 
