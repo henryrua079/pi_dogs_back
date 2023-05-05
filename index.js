@@ -7,7 +7,7 @@ const server = require('./src/app.js');
 const  getAllTemperaments = require('./src/Controllers/getAllTemperaments.js') 
 const port = process.env.PORT || 3001;
 // Syncing all the models at once.
-conn.sync({ force: true }).then(() => {
+conn.sync({ alter: true }).then(() => {
   server.listen(port, async () => {
     console.log(`listening at ${port}`); // eslint-disable-line no-console
   
