@@ -1,7 +1,7 @@
 const { Temperament } = require('../db');
 require('dotenv').config();
 
-const { URL_BASE } = process.env
+// const { URL_BASE } = process.env
 
 const getAllTemperaments = async () => {
 

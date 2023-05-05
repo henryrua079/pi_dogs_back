@@ -13,7 +13,7 @@ conn.sync({ force: true }).then(() => {
   
     const temperamets = await getAllTemperaments()
 
-    if (temperamets) return;
+    if (temperamets.length) return;
 
     const dogs = await axios(`${URL_BASE}`)
       .then(response => response.data)
